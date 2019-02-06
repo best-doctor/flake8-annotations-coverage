@@ -5,14 +5,14 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/8480286aaae1c0612351/maintainability)](https://codeclimate.com/github/best-doctor/flake8-annotations-coverage/maintainability)
 
 
-An extension for flake8 to report on files with lot of code
+An extension for flake8 to report on files with a lot of code
 without type annotations.
 
 This is mostly useful when you add type annotations to existing
 large codebase and want to know if new code in annotated modules
  is annotated.
 
-Minimal annotations coverage percent for each file can be configured via
+Minimal annotations coverage percentage for each file can be configured via
 `--min-coverage-percents` option, default is 75.
 
 Function is treated as annotated if it has annotation for at least
