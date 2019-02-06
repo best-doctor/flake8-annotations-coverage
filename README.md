@@ -2,6 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/best-doctor/flake8-annotations-coverage.svg?branch=master)](https://travis-ci.org/best-doctor/flake8-annotations-coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8480286aaae1c0612351/maintainability)](https://codeclimate.com/github/best-doctor/flake8-annotations-coverage/maintainability)
 
 
 An extension for flake8 to report on files with lot of code
