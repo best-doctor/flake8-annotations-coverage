@@ -1,4 +1,4 @@
 check:
 	flake8 .
 	mypy .
-	pytest .
+	pytest --cov=. --cov-report=xm
