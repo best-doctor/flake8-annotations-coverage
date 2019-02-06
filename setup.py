@@ -14,10 +14,10 @@ def get_version() -> Optional[str]:
             return line.split('=')[-1].strip().strip("'")
 
 
-def get_long_description():
+def get_long_description() -> str:
     with open('README.md') as f:
         return f.read()
-    return '\n\n'.join(descr)
+
 
 setup(
     name=package_name,
