@@ -28,19 +28,23 @@ not as dynamically typed.
 
 Sample file:
 
-    # test.py
+```python
+# test.py
 
-    def annotated_function(some_arg: int):
-        pass
+def annotated_function(some_arg: int):
+    pass
 
 
-    def unannotated_function():
-        pass
+def unannotated_function():
+    pass
+```
 
 Usage:
 
-    $ flake8 test.py
-    test.py:0:1: TAE001 too few type annotations
+```terminal
+$ flake8 test.py
+test.py:0:1: TAE001 too few type annotations
+```
 
 Tested on Python 3.6.5 and flake8 3.7.4.
 
