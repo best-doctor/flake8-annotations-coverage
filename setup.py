@@ -26,7 +26,7 @@ setup(
             'TAE001 = flake8_annotations_coverage.annotations_coverage:AnnotationsCoverageChecker'
         ],
     },
-    url='https://github.com/bestdoctor/flake8-annotations-coverage',
+    url='https://github.com/best-doctor/flake8-annotations-coverage',
     license='MIT',
     py_modules=[package_name],
     zip_safe=False,
