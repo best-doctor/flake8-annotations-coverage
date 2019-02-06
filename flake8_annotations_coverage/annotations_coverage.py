@@ -27,11 +27,11 @@ class AnnotationsCoverageChecker:
             / len(defs_annotations_info)
             * 100,
         )
-        if annotations_coverage < self.min_coverage_percents:
+        if self.min_coverage_percents and annotations_coverage < self.min_coverage_percents:
             yield 0, 0, self._error_message, type(self)
 
     @classmethod
-    def add_options(cls, parser):
+    def add_options(cls, parser) -> None:
         parser.add_option(
             '--min-coverage-percents',
             type=int,
@@ -40,5 +40,5 @@ class AnnotationsCoverageChecker:
         )
 
     @classmethod
-    def parse_options(cls, options):
+    def parse_options(cls, options) -> None:
         cls.min_coverage_percents = int(options.min_coverage_percents)

@@ -5,4 +5,4 @@ install:
   - pip install -r requirements_dev.txt
   - pip install -e .
 script:
-  - pytest .
+  - make check

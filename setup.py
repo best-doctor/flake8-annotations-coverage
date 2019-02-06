@@ -1,15 +1,18 @@
+from typing import Optional
+
 from setuptools import setup, find_packages
 
 
 package_name = 'flake8_annotations_coverage'
 
 
-def get_version():
+def get_version() -> Optional[str]:
     with open('flake8_annotations_coverage/__init__.py', 'r') as f:
         lines = f.readlines()
     for line in lines:
         if line.startswith('__version__'):
             return line.split('=')[-1].strip()
+
 
 setup(
     name=package_name,
@@ -23,7 +26,7 @@ setup(
     install_requires=['setuptools'],
     entry_points={
         'flake8.extension': [
-            'TAE001 = flake8_annotations_coverage.annotations_coverage:AnnotationsCoverageChecker'
+            'TAE001 = flake8_annotations_coverage.annotations_coverage:AnnotationsCoverageChecker',
         ],
     },
     url='https://github.com/best-doctor/flake8-annotations-coverage',
