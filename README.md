@@ -43,3 +43,19 @@ Usage:
     test.py:0:1: TAE001 too few type annotations
 
 Tested on Python 3.6.5 and flake8 3.7.4.
+
+
+## Contributing
+
+We would love you to contribute to our project. It's simple:
+
+1. Create an issue with bug you found or proposal you have. Wait for approve from maintainer.
+2. Create a pull request. Make sure all checks are green.
+3. Fix review comments if any.
+4. Be awesome.
+
+Here are useful tips:
+
+- You can run all checks and tests with `make check`. Please do it before TravisCI does.
+- We use [BestDoctor python styleguide](https://github.com/best-doctor/guides/blob/master/guides/python_styleguide.md). Sorry, styleguide is available only in Russian for now.
+- We respect [Django CoC](https://www.djangoproject.com/conduct/). Make soft, not bullshit.
