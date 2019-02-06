@@ -1,4 +1,4 @@
 check:
 	flake8 .
 	mypy .
-	pytest --cov=. --cov-report=xml
+	pytest --cov=flake8_annotations_coverage --cov-report=xml
