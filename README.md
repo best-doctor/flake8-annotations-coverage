@@ -1,5 +1,9 @@
 # flake8-annotations-coverage
 
+
+[![Build Status](https://travis-ci.org/best-doctor/flake8-annotations-coverage.svg?branch=master)](https://travis-ci.org/best-doctor/flake8-annotations-coverage)
+
+
 An extension for flake8 to report on files with lot of code
 without type annotations.
 
