@@ -21,7 +21,7 @@ not as dynamically typed.
 
 ## Installation
 
-    pip install git+https://github.com/best-doctor/flake8-annotations-coverage.git
+    pip install flake8-annotations-coverage
 
 
 ## Example

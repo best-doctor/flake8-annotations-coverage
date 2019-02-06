@@ -11,12 +11,18 @@ def get_version() -> Optional[str]:
         lines = f.readlines()
     for line in lines:
         if line.startswith('__version__'):
-            return line.split('=')[-1].strip()
+            return line.split('=')[-1].strip().strip("'")
 
+
+def get_long_description():
+    with open('README.md') as f:
+        return f.read()
+    return '\n\n'.join(descr)
 
 setup(
     name=package_name,
     description='A flake8 extension that checks for type annotations coverage',
+    long_description=get_long_description(),
     packages=find_packages(),
     include_package_data=True,
     keywords='flake8 annotations',
