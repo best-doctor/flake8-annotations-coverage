@@ -25,3 +25,8 @@ def test_ok_for_kwonly_annotated_file():
     assert not errors
     errors = run_validator_for_test_file('kwonly_arg_annotated.py', min_coverage=100)
     assert len(errors) == 1
+
+
+def test_ok_for_kwargs_annotated_file():
+    errors = run_validator_for_test_file('kwargs_annotated.py')
+    assert not errors
