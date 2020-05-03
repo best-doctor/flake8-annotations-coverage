@@ -2,6 +2,7 @@ language: python
 python:
   - "3.6"
 install:
+  - gem install mdl
   - pip install -r requirements_dev.txt
   - pip install -e .
 before_script:
