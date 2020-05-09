@@ -17,19 +17,6 @@ class AnnotationsCoverageChecker:
         self.filename = filename
         self.tree = tree
 
-    def run(self) -> Generator[Tuple[int, int, str, type], None, None]:
-        func_defs = [f for f in ast.walk(self.tree) if isinstance(f, ast.FunctionDef)]
-        defs_annotations_info = [has_type_annotations(f) for f in func_defs]
-        if not defs_annotations_info:
-            return
-        annotations_coverage = int(
-            len(list(filter(None, defs_annotations_info)))
-            / len(defs_annotations_info)
-            * 100,
-        )
-        if self.min_coverage_percents and annotations_coverage < self.min_coverage_percents:
-            yield 0, 0, self._error_message, type(self)
-
     @classmethod
     def add_options(cls, parser) -> None:
         parser.add_option(
@@ -42,3 +29,16 @@ class AnnotationsCoverageChecker:
     @classmethod
     def parse_options(cls, options) -> None:
         cls.min_coverage_percents = int(options.min_coverage_percents)
+
+    def run(self) -> Generator[Tuple[int, int, str, type], None, None]:
+        func_defs = [f for f in ast.walk(self.tree) if isinstance(f, ast.FunctionDef)]
+        defs_annotations_info = [has_type_annotations(f) for f in func_defs]
+        if not defs_annotations_info:
+            return
+        annotations_coverage = int(
+            len(list(filter(None, defs_annotations_info)))
+            / len(defs_annotations_info)
+            * 100,
+        )
+        if self.min_coverage_percents and annotations_coverage < self.min_coverage_percents:
+            yield 0, 0, self._error_message, type(self)
