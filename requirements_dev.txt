@@ -1,6 +1,6 @@
 pytest==5.4.1
 pytest-cov==2.8.1
-pydocstyle==3.0.0
+pydocstyle==5.0.2
 flake8==3.7.9
 flake8-2020==1.6.0
 flake8-annotations-complexity==0.0.4
@@ -26,3 +26,7 @@ mypy==0.770
 mypy-extensions==0.4.3
 safety==1.9.0
 dlint==0.10.3
+flake8-if-statements==0.1.0
+flake8-functions==0.0.4
+flake8-annotations-coverage==0.0.4
+flake8-expression-complexity==0.0.7
