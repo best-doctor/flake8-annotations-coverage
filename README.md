@@ -48,6 +48,12 @@ test.py:0:1: TAE001 too few type annotations
 
 Tested on Python 3.6.5 and flake8 3.7.4.
 
+## Error codes
+
+| Error code | Description                      |
+|:----------:|:--------------------------------:|
+| TAE001     | Too few type annotations in file |
+
 ## Contributing
 
 We would love you to contribute to our project. It's simple:
