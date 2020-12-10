@@ -11,7 +11,7 @@ class AnnotationsCoverageChecker:
     default_min_coverage_percents = 75
     min_coverage_percents = None
 
-    _error_message = 'TAE001 too few type annotations'
+    _error_message = 'TAE001 too few type annotations ({}%)'
 
     def __init__(self, tree, filename: str):
         self.filename = filename
@@ -41,4 +41,4 @@ class AnnotationsCoverageChecker:
             * 100,
         )
         if self.min_coverage_percents and annotations_coverage < self.min_coverage_percents:
-            yield 0, 0, self._error_message, type(self)
+            yield 0, 0, self._error_message.format(annotations_coverage), type(self)
