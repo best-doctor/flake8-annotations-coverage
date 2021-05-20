@@ -1,6 +1,6 @@
 # flake8-annotations-coverage
 
-[![Build Status](https://travis-ci.org/best-doctor/flake8-annotations-coverage.svg?branch=master)](https://travis-ci.org/best-doctor/flake8-annotations-coverage)
+[![Build Status](https://github.com/best-doctor/flake8-annotations-coverage/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/best-doctor/flake8-annotations-coverage/actions/workflows/build.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8480286aaae1c0612351/maintainability)](https://codeclimate.com/github/best-doctor/flake8-annotations-coverage/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8480286aaae1c0612351/test_coverage)](https://codeclimate.com/github/best-doctor/flake8-annotations-coverage/test_coverage)
 
@@ -46,8 +46,6 @@ $ flake8 test.py
 test.py:0:1: TAE001 too few type annotations
 ```
 
-Tested on Python 3.6.5 and flake8 3.7.4.
-
 ## Error codes
 
 | Error code | Description                      |
@@ -67,7 +65,7 @@ We would love you to contribute to our project. It's simple:
 Here are useful tips:
 
 - You can run all checks and tests with `make check`.
-  Please do it before TravisCI does.
+  Please do it before CI does.
 - We use [BestDoctor python styleguide](https://github.com/best-doctor/guides/blob/master/guides/en/python_styleguide.md).
 - We respect [Django CoC](https://www.djangoproject.com/conduct/).
   Make soft, not bullshit.
